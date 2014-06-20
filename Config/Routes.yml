@@ -1,0 +1,61 @@
+#Manager
+    Builder:
+        url: /manager/app/new
+        method: GET 
+        callback: Manager.builder
+
+    Dashboard:
+        url: /manager
+        method: GET 
+        callback: Manager.dashboard
+
+#Home
+    Home:
+        url: /
+        method: GET
+        callback: Home.index
+
+#Users
+    Profile:
+        url: /profiles/:user_nickname
+        method: GET
+        callback: Users.profile
+
+    Account:
+        url: /account
+        method: GET
+        callback: Users.account
+
+    Login:
+        url: /login
+        method: GET
+        callback: Users.login
+
+    Register:
+        url: /register
+        method: GET
+        callback: Users.register
+
+    Recover:
+        url: /recover
+        method: GET
+        callback: Users.recover
+
+    Logout:
+        url: /logout 
+        method: GET
+        callback: Users.logout
+#Blog
+    Blog:
+        url: /blog
+        method: GET
+        callback: Blog.index
+    BlogArticle:
+        url: /blog/:slug
+        method: GET
+        callback: Blog.article
+#Contact
+    Contact:
+        url: /contact 
+        method: GET 
+        callback: Contact.index

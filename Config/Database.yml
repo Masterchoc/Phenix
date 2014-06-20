@@ -1,0 +1,19 @@
+databases:
+
+    dev:
+        host: localhost
+        user: root
+        password: laridja
+        database:phenix
+
+    test:
+        host: localhost 
+        user: root
+        password:
+        database:
+
+    production:
+        host: localhost
+        user: root
+        password:
+        database:

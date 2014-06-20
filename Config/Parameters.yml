@@ -1,0 +1,3 @@
+environment: DEV
+MANDRILL_API_KEY: mandrill_key
+PAYPAL_API_KEY: paypal_key

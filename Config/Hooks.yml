@@ -1,0 +1,4 @@
+setManagerLayout:
+    callback: App.setLayout
+    params:
+        layout: manager.ctp

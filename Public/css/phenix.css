@@ -1,0 +1,53 @@
+/*  GENERAL */
+
+
+
+
+
+
+/*  STRUCTURE */
+
+.top-bar h1.fix
+{
+	line-height: 23px;
+}
+
+.side-nav
+{
+	width: 180px;
+}
+
+.footer
+{
+	height: 50px;
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    line-height: 50px;
+    color: #aaa;
+    text-align: center;
+    width: 100%;
+    box-shadow: inset 0px 5px 5px #ccc;
+    padding: 0px 0px 0px 10px;
+}
+
+/*  COMPONENTS */
+
+.debug-bar
+{
+	margin: 0px;
+	padding:0px;
+}
+.debug-bar .title
+{
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.debug-bar li
+{
+	height: 50px;
+	list-style: none;
+	line-height: 50px;
+	display: inline-block;
+}
