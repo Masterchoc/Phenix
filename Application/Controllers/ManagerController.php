@@ -10,6 +10,7 @@ class ManagerController extends AppController
 
 	public function builder()
 	{
+		$this->setLayout('manager');
 		$this->render();
 	}
 }
