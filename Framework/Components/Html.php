@@ -1,6 +1,6 @@
 <?php
 
-class Html extends Template
+class Html
 {
  	protected static $doctypes =
  	[
