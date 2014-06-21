@@ -1,6 +1,6 @@
 <?php
 
-class Html
+class Html extends Template
 {
  	protected static $doctypes =
  	[
@@ -69,6 +69,21 @@ class Html
 	{
 		if(isset(self::$doctypes[$doc]))
 			return self::$doctypes[$doc]."\n";
+	}
+
+	public function brand($ul_class, $li_class)
+	{
+		if(!empty($ul_class) && !empty($li_class))
+		{
+			return $output =
+			'<ul class="'.$ul_class.'">
+				<li class="'.$li_class.'">
+					<h1 '.(!empty(Config::$remote->appSubName) ? 'class="fix"' : '').'>
+					<a href="/">'.Config::$remote->appName.'<br>'.Config::$remote->appSubName.'</a>
+					</h1>
+				</li>
+			</ul>';
+		}
 	}
 
 	public function menu($section_class, $ul_class)
