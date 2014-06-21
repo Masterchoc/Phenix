@@ -15,36 +15,30 @@
 		{ENDIF:}
 	</head>
 	<body>
-		<nav class="top-bar" data-topbar>
-			<ul class="title-area">
-				<li class="name">
-					<h1 {IF:!empty($this->data['config_appSubName'])}class="fix"{ENDIF:}>
-					<a href="/">{config_appName}<br>{config_appSubName}</a>
-					</h1>
-				</li>
-			</ul>
-			{@menu top-bar-section left}
-		</nav>
+	<nav class="top-bar" data-topbar>
+		{@brand title-area name}
+		{@menu top-bar-section left}
+	</nav>
 
-		<div class="row">
-			{content_for_layout|raw}
-		</div>
+	<div class="row">
+		{content_for_layout|raw}
+	</div>
 
-		<div class="footer">
-			{IF:Config::$app->environment == 'DEV'}
-				{debug_bar|raw}
-			{ENDIF:}
-		</div>
-
+	<div class="footer">
 		{IF:Config::$app->environment == 'DEV'}
-			{@script rainbow.min.js}
+			{debug_bar|raw}
 		{ENDIF:}
+	</div>
 
-		{@script vendor/modernizr.js}
-		{@script vendor/jquery.js}
-		{@script foundation.min.js}
-		{@script app.js}
+	{IF:Config::$app->environment == 'DEV'}
+		{@script rainbow.min.js}
+	{ENDIF:}
 
-		<script>$(document).foundation();</script>
+	{@script vendor/modernizr.js}
+	{@script vendor/jquery.js}
+	{@script foundation.min.js}
+	{@script app.js}
+
+	<script>$(document).foundation();</script>
 	</body>
 </html>
