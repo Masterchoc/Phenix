@@ -13,6 +13,7 @@ class BlogController extends AppController
 		$this->set('articles', $articles['result']);
 		$this->set('pages',    $articles['pages']);
 
+		$this->setLayout('blog');
 		$this->render();
 	}
 
