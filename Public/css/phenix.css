@@ -35,8 +35,14 @@
 
 .debug-bar
 {
+	position: fixed;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	height: 50px;
 	margin: 0px;
 	padding:0px;
+	background:white;
 }
 .debug-bar .title
 {
