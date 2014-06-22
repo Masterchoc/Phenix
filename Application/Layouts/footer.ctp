@@ -1,6 +1,8 @@
+	<footer>
 	{IF:Config::$app->environment == 'DEV'}
 		{debug_bar|raw}
 	{ENDIF:}
+	</footer>
 	{IF:Config::$app->environment == 'DEV'}
 		{@script rainbow.min.js}
 	{ENDIF:}
