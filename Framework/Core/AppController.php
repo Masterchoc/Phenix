@@ -138,11 +138,14 @@ class AppController extends Request
 						$this->set('debug_bar', $this->template->process($debug, $this->vars));
 					}
 
+					$header = file_get_contents(LAYOUTS.DS.'header.ctp');
+					$footer = file_get_contents(LAYOUTS.DS.'footer.ctp');
+
 					$layout = file_get_contents(LAYOUTS.DS.$this->layout);
+					$layout = $header.$layout.$footer;
 					$view   = file_get_contents(VIEWS.DS.str_replace('Controller', '', $this->controller).DS.$this->action.'.tpl');
 					
 					$this->set('content_for_layout', $this->template->process($view, $this->vars));
-
 
 					$html = $this->template->process($layout, $this->vars);
 
