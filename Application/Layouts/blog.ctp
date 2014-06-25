@@ -10,19 +10,24 @@
 
 <aside class="large-3 columns">
   <h5>Categories</h5>
-  <ul class="side-nav">
-    <li><a href="#">News</a></li>
-    <li><a href="#">Code</a></li>
-    <li><a href="#">Design</a></li>
-    <li><a href="#">Fun</a></li>
-    <li><a href="#">Weasels</a></li>
-  </ul>
+  {IF:!empty($this->data['categories'])}
+    <ul class="side-nav">
+    {FOR:categories}
+      <li><a href="/blog/categorie/{name|slugify}">{name}</a></li>
+    {END:}
+    </ul>
+  {ENDIF:}
 
+  {IF:!empty($this->data['featured'])}
   <div class="panel">
     <h5>Featured</h5>
-    <p>Pork drumstick turkey fugiat. Tri-tip elit turducken pork chop in. Swine short ribs meatball irure bacon nulla pork belly cupidatat meatloaf cow.</p>
-    <a href="#">Read More →</a>
+    {FOR:featured}
+    <p>{content}</p>
+    <a href="/blog/{slug}">Lire la suite →</a>
+    {END:}
   </div>
+  {ENDIF:}
+
 </aside>
 </div>
 <footer class="row">
