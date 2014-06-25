@@ -4,7 +4,7 @@ class HomeController extends AppController
 {
 	public function index()
 	{		
-		$this->setLayout('default');
+		$this->setLayout('workspace');
 		$this->render();
 	}
 }
