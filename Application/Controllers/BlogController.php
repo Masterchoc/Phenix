@@ -6,10 +6,12 @@ class BlogController extends AppController
 	{
 		$articles = $this->Blog->getAll();
 
-		$this->set('articles', $articles['result']);
-		$this->set('pages',    $articles['pages']);
+		$this->set('pages',      $articles['pages']);
+		$this->set('featured',   $articles['featured']);
+		$this->set('articles',   $articles['result']);
+		$this->set('categories', $articles['categories']);
+
 		$this->setLayout('blog');
-		
 		$this->render();
 	}
 
