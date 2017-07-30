@@ -6,7 +6,7 @@ class Config extends Dispatcher
 	[
 		'host'     => 'localhost',
 		'user'     => 'root',
-		'password' => 'laridja',
+		'password' => '',
 		'database' => 'phenix'
 	];
 
